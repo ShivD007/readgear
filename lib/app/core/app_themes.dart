@@ -4,11 +4,11 @@ import 'app_colors.dart';
 
 class AppThemes {
   static final ligtTheme = ThemeData(
-      scaffoldBackgroundColor: AppColors.COLOR_BLUE_50,
+      scaffoldBackgroundColor: AppColors.COLOR_WHITE_TRANSPARENT,
       colorScheme:
           const ColorScheme.light().copyWith(primary: AppColors.COLOR_BLUE_500),
       fontFamily: 'OpenSansRegular',
-      backgroundColor: AppColors.COLOR_BLUE_50,
+      backgroundColor: AppColors.COLOR_WHITE_TRANSPARENT,
       primaryColor: AppColors.COLOR_BLUE_900,
       primarySwatch: const MaterialColor(
         0xff3AB4DD,

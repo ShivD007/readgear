@@ -66,7 +66,7 @@ class WalkThroughView extends GetView<WalkThroughController> {
               height: 48.h,
               width: 300.w,
               child: SecondaryButton(
-                  btnTitle: ALREADY_HAVE_ACCOUNT,
+                  btnTitle: LET_GET_STARTED,
                   onClick: () {
                     CustomNavigator.pushTo(Routes.LOGIN_WITH_OTP);
                   },

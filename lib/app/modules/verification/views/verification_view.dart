@@ -25,7 +25,7 @@ class VerificationView extends GetView<VerificationController> {
       key: controller.scaffoldKey,
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.h),
+          padding: EdgeInsets.symmetric(horizontal: 55.h),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[

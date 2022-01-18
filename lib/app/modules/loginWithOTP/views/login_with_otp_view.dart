@@ -63,23 +63,6 @@ class LoginWithOTPView extends GetView<LoginWithOTPController> {
                   },
                 ),
               ),
-              CustomSpacers.height32,
-              ClickableText(
-                  strButtonText: LOGIN_WITH_PASSWORD,
-                  textColor: AppColors.COLOR_BLUE_500,
-                  buttonAction: () =>
-                      CustomNavigator.pushTo(Routes.LOGIN_PASSWORD)),
-              CustomSpacers.height40,
-              const Spacer(),
-              SizedBox(
-                height: 48.h,
-                width: 300.w,
-                child: SecondaryButton(
-                  btnTitle: CREATE_AN_ACCOUNT,
-                  padding: 0.0,
-                  onClick: () => CustomNavigator.pushTo(Routes.CREATE_ACCOUNT),
-                ),
-              ),
               CustomSpacers.height40,
             ],
           ),

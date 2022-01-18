@@ -138,85 +138,86 @@ class VerificationController extends GetxController {
     var dataToSend;
     var otpController;
     String endPoint;
-    if (verificationPageType == VerificationPageType.ForCreateAccount) {
-      otpController = Get.find<CreateAccountController>();
-      dataToSend = {
-        "otp": 1234,
-        "mobileNumber": otpController.mobileEditingController.text,
-        "country_code": "91",
-        "userData": {
-          "userType": otpController.selectedProfession!.id,
-          "full_name": otpController.nameEditingController.text,
-          "email": otpController.emailEditingController.text,
-          "pincode": int.parse(otpController.pinCodeEditingController.text),
-          "userPassword": otpController.pwdEditingController.text,
-          "title": otpController.selectedTitle!.id,
-        }
-      };
-      // print(dataToSend);
-      endPoint = VERIFY_REGISTERATION_ENDPOINT;
-    } else {
-      if (verificationPageType == VerificationPageType.ForLoggin) {
-        otpController = Get.find<LoginWithOTPController>();
-        dataToSend =
-            ValidationFunctions.isEmail(otpController.emailPhoneController.text)
-                ? {
-                    "email": otpController.emailPhoneController.text,
-                    "otp": int.parse(textEditingController.text),
-                    "country_code": "91"
-                  }
-                : {
-                    "mobileNumber": otpController.emailPhoneController.text,
-                    "otp": int.parse(textEditingController.text),
-                    "country_code": "91"
-                  };
-        endPoint =
-            ValidationFunctions.isEmail(otpController.emailPhoneController.text)
-                ? LOGIN_WITH_EMAIL_OTP_ENPOINT
-                : LOGIN_WITH_MOBILE_OTP_ENPOINT;
-      } else if (verificationPageType ==
-          VerificationPageType.ForChangePassword) {
-        otpController = Get.find<ForgotPasswordController>();
-        dataToSend =
-            ValidationFunctions.isEmail(otpController.emailPhoneController.text)
-                ? {
-                    "email": otpController.emailPhoneController.text,
-                    "otp": int.parse(textEditingController.text),
-                  }
-                : {
-                    "mobileNumber": otpController.emailPhoneController.text,
-                    "otp": int.parse(textEditingController.text),
-                  };
-        endPoint =
-            ValidationFunctions.isEmail(otpController.emailPhoneController.text)
-                ? VERIFY_OTP_EMAIL_ENDPOINT
-                : VERIFY_OTP_MOBILE_ENDPOINT;
-      } else {
-        endPoint = "";
-      }
-    }
-    Either<FailureModel, ApiResponseModel> response =
-        await nodeApiCalls.postRequestWithoutAuth(
-      endPoint,
-      dataToSend,
-    );
-    response.fold((failure) {}, (apiResponse) async {
-      if (apiResponse.status) {
-        if (verificationPageType == VerificationPageType.ForChangePassword) {
-          CustomNavigator.pushReplacement(Routes.CHANGE_PASWORD);
-        } else {
-          await CustomSharePreferenceMethods.addKeyValue(
-              "authToken", apiResponse.entity["token"]);
-          authController.authToken.value = apiResponse.entity["token"];
-          authController.user.value = User.fromJson(apiResponse.entity["user"]);
-          await CustomSharePreferenceMethods.addKeyValue(
-            "user",
-            jsonEncode(apiResponse.entity),
-          );
-          CustomNavigator.pushTo(Routes.HOME);
-        }
-      } else {}
-    });
+    CustomNavigator.pushTo(Routes.HOME);
+    // if (verificationPageType == VerificationPageType.ForCreateAccount) {
+    //   otpController = Get.find<CreateAccountController>();
+    //   dataToSend = {
+    //     "otp": 1234,
+    //     "mobileNumber": otpController.mobileEditingController.text,
+    //     "country_code": "91",
+    //     "userData": {
+    //       "userType": otpController.selectedProfession!.id,
+    //       "full_name": otpController.nameEditingController.text,
+    //       "email": otpController.emailEditingController.text,
+    //       "pincode": int.parse(otpController.pinCodeEditingController.text),
+    //       "userPassword": otpController.pwdEditingController.text,
+    //       "title": otpController.selectedTitle!.id,
+    //     }
+    //   };
+    //   // print(dataToSend);
+    //   endPoint = VERIFY_REGISTERATION_ENDPOINT;
+    // } else {
+    //   if (verificationPageType == VerificationPageType.ForLoggin) {
+    //     otpController = Get.find<LoginWithOTPController>();
+    //     dataToSend =
+    //         ValidationFunctions.isEmail(otpController.emailPhoneController.text)
+    //             ? {
+    //                 "email": otpController.emailPhoneController.text,
+    //                 "otp": int.parse(textEditingController.text),
+    //                 "country_code": "91"
+    //               }
+    //             : {
+    //                 "mobileNumber": otpController.emailPhoneController.text,
+    //                 "otp": int.parse(textEditingController.text),
+    //                 "country_code": "91"
+    //               };
+    //     endPoint =
+    //         ValidationFunctions.isEmail(otpController.emailPhoneController.text)
+    //             ? LOGIN_WITH_EMAIL_OTP_ENPOINT
+    //             : LOGIN_WITH_MOBILE_OTP_ENPOINT;
+    //   } else if (verificationPageType ==
+    //       VerificationPageType.ForChangePassword) {
+    //     otpController = Get.find<ForgotPasswordController>();
+    //     dataToSend =
+    //         ValidationFunctions.isEmail(otpController.emailPhoneController.text)
+    //             ? {
+    //                 "email": otpController.emailPhoneController.text,
+    //                 "otp": int.parse(textEditingController.text),
+    //               }
+    //             : {
+    //                 "mobileNumber": otpController.emailPhoneController.text,
+    //                 "otp": int.parse(textEditingController.text),
+    //               };
+    //     endPoint =
+    //         ValidationFunctions.isEmail(otpController.emailPhoneController.text)
+    //             ? VERIFY_OTP_EMAIL_ENDPOINT
+    //             : VERIFY_OTP_MOBILE_ENDPOINT;
+    //   } else {
+    //     endPoint = "";
+    //   }
+    // }
+    // Either<FailureModel, ApiResponseModel> response =
+    //     await nodeApiCalls.postRequestWithoutAuth(
+    //   endPoint,
+    //   dataToSend,
+    // );
+    // response.fold((failure) {}, (apiResponse) async {
+    //   if (apiResponse.status) {
+    //     if (verificationPageType == VerificationPageType.ForChangePassword) {
+    //       CustomNavigator.pushReplacement(Routes.CHANGE_PASWORD);
+    //     } else {
+    //       await CustomSharePreferenceMethods.addKeyValue(
+    //           "authToken", apiResponse.entity["token"]);
+    //       authController.authToken.value = apiResponse.entity["token"];
+    //       authController.user.value = User.fromJson(apiResponse.entity["user"]);
+    //       await CustomSharePreferenceMethods.addKeyValue(
+    //         "user",
+    //         jsonEncode(apiResponse.entity),
+    //       );
+    //       CustomNavigator.pushTo(Routes.HOME);
+    //     }
+    //   } else {}
+    // });
   }
 
   onClickResendOtp(VerificationPageType verificationPageType) async {

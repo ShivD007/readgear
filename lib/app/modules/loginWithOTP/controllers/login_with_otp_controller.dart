@@ -37,19 +37,22 @@ class LoginWithOTPController extends GetxController {
         ValidationFunctions.isEmail(emailPhoneController.text)
             ? SEND_OTP_EMAIL_ENDPOINT
             : SEND_OTP_MOBILE_ENDPOINT;
-    Either<FailureModel, ApiResponseModel> response =
-        await nodeApiCalls.postRequestWithoutAuth(
-      getOtpEndpoint,
-      body,
-    );
 
-    response.fold((failure) {}, (apiResponse) async {
-      if (apiResponse.status) {
-        EasyLoading.dismiss();
-        CustomNavigator.pushTo(Routes.VERIFICATION,
-            arguments: VerificationPageType.ForLoggin);
-      } else {}
-    });
+    CustomNavigator.pushTo(Routes.VERIFICATION,
+        arguments: VerificationPageType.ForLoggin);
+    // Either<FailureModel, ApiResponseModel> response =
+    //     await nodeApiCalls.postRequestWithoutAuth(
+    //   getOtpEndpoint,
+    //   body,
+    // );
+
+    // response.fold((failure) {}, (apiResponse) async {
+    //   if (apiResponse.status) {
+    //     EasyLoading.dismiss();
+    //     CustomNavigator.pushTo(Routes.VERIFICATION,
+    //         arguments: VerificationPageType.ForLoggin);
+    //   } else {}
+    // });
   }
 
   @override

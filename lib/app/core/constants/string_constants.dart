@@ -24,6 +24,7 @@ const CREATE_AN_ACCOUNT = "Create an account";
 const HINT_SELECT_PROFESSION = "Select Profession*";
 
 const ALREADY_HAVE_ACCOUNT = "I already have an account";
+const LET_GET_STARTED = "Let's get started";
 const TITLE = "Title";
 const FULL_NAME = "Full Name*";
 const FULL_NAME_WITHOUT_ASTRIK = "Full Name";
