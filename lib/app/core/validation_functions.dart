@@ -1,4 +1,4 @@
-import 'package:nirog_street/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
 
 import 'constants/value_constants.dart';
 

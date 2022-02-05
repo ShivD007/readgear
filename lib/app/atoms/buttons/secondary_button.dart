@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/atoms/buttons/button_core.dart';
+import 'package:readgear/app/atoms/buttons/button_core.dart';
 
 class SecondaryButton extends ButtonCore {
   SecondaryButton(

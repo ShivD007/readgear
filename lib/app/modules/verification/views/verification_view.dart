@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:nirog_street/app/atoms/buttons/primary_button.dart';
-import 'package:nirog_street/app/atoms/clickable_text.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
-import 'package:nirog_street/app/modules/verification/controllers/verification_controller.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/atoms/buttons/primary_button.dart';
+import 'package:readgear/app/atoms/clickable_text.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
+import 'package:readgear/app/modules/verification/controllers/verification_controller.dart';
+import 'package:readgear/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '/app/atoms/custom_spacers.dart';
 
@@ -21,7 +21,7 @@ class VerificationView extends GetView<VerificationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.COLOR_BLUE_50,
+      backgroundColor: AppColors.COLOR_RED_50,
       key: controller.scaffoldKey,
       body: SafeArea(
         child: Container(
@@ -74,7 +74,7 @@ class VerificationView extends GetView<VerificationController> {
                     cursorColor: Colors.black54,
                     animationDuration: const Duration(milliseconds: 300),
                     textStyle: const TextStyle(fontSize: 20, height: 1),
-                    backgroundColor: AppColors.COLOR_BLUE_50,
+                    backgroundColor: AppColors.COLOR_RED_50,
                     enableActiveFill: true,
                     errorAnimationController: controller.errorController,
                     controller: controller.textEditingController,
@@ -118,7 +118,7 @@ class VerificationView extends GetView<VerificationController> {
                           await controller
                               .onClickResendOtp(_verificationPageType);
                         },
-                        textColor: AppColors.COLOR_BLUE_500),
+                        textColor: AppColors.COLOR_RED_500),
                     const Spacer(),
                     ClickableText(
                         strButtonText: CHANGE_NUMBER,
@@ -126,7 +126,7 @@ class VerificationView extends GetView<VerificationController> {
                           CustomNavigator.pushReplacement(
                               Routes.LOGIN_WITH_OTP);
                         },
-                        textColor: AppColors.COLOR_BLUE_500),
+                        textColor: AppColors.COLOR_RED_500),
                   ],
                 ),
                 CustomSpacers.height48,

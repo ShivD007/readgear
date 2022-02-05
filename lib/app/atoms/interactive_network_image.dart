@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/core/app_colors.dart';
+
 class InteractiveNetworkImage extends StatelessWidget {
   final double height;
   final double width;
@@ -17,7 +18,7 @@ class InteractiveNetworkImage extends StatelessWidget {
       panEnabled: false, // Set it to false
       minScale: 1,
       maxScale: 2,
-      onInteractionEnd: (ScaleEndDetails details){
+      onInteractionEnd: (ScaleEndDetails details) {
         print("interaction with image done");
       },
       child: Container(

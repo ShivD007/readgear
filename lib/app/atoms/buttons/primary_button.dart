@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/buttons/button_core.dart';
+import 'package:readgear/app/atoms/buttons/button_core.dart';
 
 class PrimaryButton extends ButtonCore {
   PrimaryButton(

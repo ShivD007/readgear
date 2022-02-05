@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/buttons/primary_button.dart';
-import 'package:nirog_street/app/atoms/buttons/secondary_button.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/atoms/buttons/primary_button.dart';
+import 'package:readgear/app/atoms/buttons/secondary_button.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 
 List<int> _getYearsInBetween(DateTime startDate, DateTime endDate) {
   List<int> _years = [];
@@ -41,7 +41,6 @@ CustomYearCalender(
                 : _yearList.length - 1
             : _yearList.length - 1;
 
-            
         return AlertDialog(
           titleTextStyle: Style.styleHeaderCardHeadingMontserrat,
           shape: OutlineInputBorder(

@@ -13,7 +13,7 @@ class Style {
       fontStyle: FontStyle.normal);
   static const TextStyle textStyleButtonWhite = TextStyle(
       fontSize: 16,
-      color: AppColors.COLOR_BLUE_500,
+      color: AppColors.COLOR_RED_500,
       fontWeight: FontWeight.w500,
       fontStyle: FontStyle.normal);
   static const TextStyle textStyleButtonGrey = TextStyle(
@@ -52,7 +52,7 @@ class Style {
       fontStyle: FontStyle.normal);
   static const TextStyle styleHeaderLoginHeadingMontserrat = TextStyle(
       fontSize: 20,
-      color: AppColors.COLOR_BLUE_500,
+      color: AppColors.COLOR_RED_500,
       fontWeight: FontWeight.w600,
       fontFamily: "Montserrat",
       fontStyle: FontStyle.normal);
@@ -73,12 +73,12 @@ class Style {
       fontStyle: FontStyle.normal);
   static const TextStyle styleHeaderCardBlueSubHeading = TextStyle(
       fontSize: 12,
-      color: AppColors.COLOR_BLUE_500,
+      color: AppColors.COLOR_RED_500,
       fontWeight: FontWeight.w400,
       fontStyle: FontStyle.normal);
   static const TextStyle styleForgotPassBlue = TextStyle(
       fontSize: 14,
-      color: AppColors.COLOR_BLUE_500,
+      color: AppColors.COLOR_RED_500,
       fontWeight: FontWeight.w600,
       fontStyle: FontStyle.normal);
   static const TextStyle styleTabItem = TextStyle(
@@ -330,7 +330,7 @@ class Style_OpenSans {
         letterSpacing: 0.2,
       );
 
-  static  TextStyle style14BOLD600(Color textColor) => TextStyle(
+  static TextStyle style14BOLD600(Color textColor) => TextStyle(
         fontSize: 14.sp,
         color: textColor,
         fontWeight: FontWeight.w600,
@@ -350,7 +350,7 @@ class Style_OpenSans {
 
   static styleButton({
     fontSize,
-    color = AppColors.COLOR_BLUE_500,
+    color = AppColors.COLOR_RED_500,
     fontWeight = FontWeight.w400,
     fontStyle = FontStyle.normal,
     fontFamily = strFontFamily,
@@ -366,7 +366,7 @@ class Style_OpenSans {
 
   static TextStyle styleBlue20 = TextStyle(
     fontSize: 20.sp,
-    color: AppColors.COLOR_BLUE_500,
+    color: AppColors.COLOR_RED_500,
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
     fontFamily: strFontFamily,
@@ -374,7 +374,7 @@ class Style_OpenSans {
   );
   static TextStyle styleBlue16 = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.COLOR_BLUE_500,
+    color: AppColors.COLOR_RED_500,
     fontWeight: FontWeight.w600,
     fontStyle: FontStyle.normal,
     fontFamily: strFontFamily,
@@ -487,7 +487,7 @@ class Styles_Lato {
       letterSpacing: 0.2);
   static TextStyle latoRegularBlue500_16px = TextStyle(
       fontSize: 16.sp,
-      color: AppColors.COLOR_BLUE_500,
+      color: AppColors.COLOR_RED_500,
       fontWeight: FontWeight.w400,
       fontStyle: FontStyle.normal,
       fontFamily: strFontFamily,

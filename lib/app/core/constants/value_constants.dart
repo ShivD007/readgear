@@ -3,10 +3,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
-import 'package:nirog_street/app/core/local_shared_data.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/local_shared_data.dart';
+import 'package:readgear/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 
 import '/app/core/constants/image_constants.dart';
 
@@ -35,79 +35,9 @@ List monthsOfTheYear = [
   "Dec"
 ];
 
-Map activitiesMap = {
-  "Buy Medicines": {
-    "assetPath": BUY_MEDICINES_ICON,
-    "onClick": () {},
-  },
-  "View \nWebinar": {
-    "assetPath": WEBINAR_ICON,
-    "onClick": () {},
-  },
-  "Learn about \nAyurveda": {
-    "assetPath": AYURVEDA_ICON,
-    "onClick": () {},
-  },
-  "View All \nQuiz": {
-    "assetPath": QUIZ_ICON,
-    "onClick": () {},
-  },
-  "My Orders": {
-    "assetPath": MY_ORDERS_ICON,
-    "onClick": () {},
-  },
-  "Communities": {
-    "assetPath": COMUNITY_ICON,
-    "onClick": () {},
-  },
-};
-
-// list and other constant datastructures
-List<Map> DRAWER_ITEMS = [
-  {
-    "icon": PROFILE_ICON,
-    "text": "My Profile",
-    "callback": () {
-      print("youoo");
-    },
-  },
-  {
-    "icon": CART_ICON,
-    "text": "My Orders",
-    "callback": () {},
-  },
-  {
-    "icon": BOOKMARK_ICON,
-    "text": "Bookmarks",
-    "callback": () {},
-  },
-  {
-    "icon": HEART_ICON,
-    "text": "Saved Medicines",
-    "callback": () {},
-  },
-  {
-    "icon": NIROG_MONEY_ICON,
-    "text": "Nirog Money",
-    "callback": () {},
-  },
-  {
-    "icon": NIROG_MONEY_ICON,
-    "text": "My Address",
-  },
-  {
-    "icon": FEED_ICON,
-    "text": "Logout",
-    "callback": () async {
-      await CustomSharePreferenceMethods.deleteKeyValue('authToken');
-      CustomNavigator.pushAndPopAll(Routes.WALKTHROUGH);
-    },
-  },
-];
-
 final List<Map<String, dynamic>> WALKTHROUGH_CAROUSEL_LIST = [
   {
-    "headingText": BUY_MEDICINE,
+    "headingText": SAFE_RIDE,
     "imagePath": ONBOARDING_1,
   },
   {
@@ -115,7 +45,7 @@ final List<Map<String, dynamic>> WALKTHROUGH_CAROUSEL_LIST = [
     "imagePath": ONBOARDING_2,
   },
   {
-    "headingText": LEARN_AYURVEDA,
+    "headingText": SAVING_EFFECTIVE,
     "imagePath": ONBOARDING_3,
   },
 ];

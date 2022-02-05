@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/core/app_colors.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   final List<Widget> widgets;

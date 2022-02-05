@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/di/injection_container.dart';
+import 'package:readgear/app/core/di/injection_container.dart';
 
 import '../controllers/verification_controller.dart';
 

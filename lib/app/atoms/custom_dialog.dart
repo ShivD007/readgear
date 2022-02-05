@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 import '/app/core/constants/style_constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
 
 class CustomDialog extends StatelessWidget {
   final List<Widget>? actions;

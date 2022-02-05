@@ -1,4 +1,4 @@
-import 'package:nirog_street/app/core/crash_analytics.dart';
+import 'package:readgear/app/core/crash_analytics.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomSharePreferenceMethods {
@@ -9,7 +9,6 @@ class CustomSharePreferenceMethods {
       var added = await prefs.setString(key, value);
       return added;
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return false;
     }
   }
@@ -20,7 +19,6 @@ class CustomSharePreferenceMethods {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       await prefs.remove(key);
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return false;
     }
   }
@@ -32,7 +30,6 @@ class CustomSharePreferenceMethods {
       var value = prefs.get(key) ?? "";
       return value;
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return "";
     }
   }

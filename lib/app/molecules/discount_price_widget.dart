@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/util_functions.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/util_functions.dart';
 
 class DiscountPriceWidget extends StatefulWidget {
   double price, discountedPrice, priceSize, discountedPriceSize;

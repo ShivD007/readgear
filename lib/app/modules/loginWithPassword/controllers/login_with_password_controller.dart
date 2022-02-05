@@ -2,16 +2,16 @@ import 'dart:convert';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/constants/api_constants.dart';
-import 'package:nirog_street/app/core/local_shared_data.dart';
-import 'package:nirog_street/app/core/models/api_response_model.dart';
-import 'package:nirog_street/app/core/models/failure_model.dart';
-import 'package:nirog_street/app/core/models/user.dart';
-import 'package:nirog_street/app/core/network_call/node_api_calls.dart';
-import 'package:nirog_street/app/core/validation_functions.dart';
-import 'package:nirog_street/app/modules/splash/controllers/splash_controller.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/core/constants/api_constants.dart';
+import 'package:readgear/app/core/local_shared_data.dart';
+import 'package:readgear/app/core/models/api_response_model.dart';
+import 'package:readgear/app/core/models/failure_model.dart';
+import 'package:readgear/app/core/models/user.dart';
+import 'package:readgear/app/core/network_call/node_api_calls.dart';
+import 'package:readgear/app/core/validation_functions.dart';
+import 'package:readgear/app/modules/splash/controllers/splash_controller.dart';
+import 'package:readgear/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 
 class LoginWithPasswordController extends GetxController {
   final NodeApiCalls nodeApiCalls;

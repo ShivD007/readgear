@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/image_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/image_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 import 'Images/custom_svg_image.dart';
 
@@ -37,8 +37,7 @@ class CustomChip extends StatelessWidget {
           child: label.body16(textColor: textColor)),
       deleteIcon: iconVisible!
           ? icon ??
-              CustomSVGImageView(
-                  imagePath: ICON_CROSS_SVG, imageColor: textColor)
+              CustomSVGImageView(imagePath: CROSS_SVG, imageColor: textColor)
           : const Icon(null),
       deleteIconColor: textColor,
       onDeleted: onDeleted,

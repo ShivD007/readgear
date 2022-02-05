@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 class ButtonCore extends StatelessWidget {
   final String btnTitle;
@@ -23,8 +23,8 @@ class ButtonCore extends StatelessWidget {
       required this.isPrimary,
       this.disable = false,
       this.buttonColor,
-        this.noBorder=false,
-      this.textColor = AppColors.COLOR_BLUE_500})
+      this.noBorder = false,
+      this.textColor = AppColors.COLOR_RED_500})
       : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class ButtonCore extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: buttonColor == null
               ? isPrimary
-                  ? MaterialStateProperty.all(AppColors.COLOR_BLUE_500
+                  ? MaterialStateProperty.all(AppColors.COLOR_RED_500
                       .withOpacity(!disable! ? 1.0 : 0.4))
                   : MaterialStateProperty.all(
                       !disable! ? null : AppColors.COLOR_GREY_200)
@@ -46,13 +46,15 @@ class ButtonCore extends StatelessWidget {
                   BorderRadius.circular(VALUE_STANDARD_BUTTON_CORNER_RADIUS),
             ),
           ),
-          side: noBorder?null:MaterialStateProperty.all(
-            BorderSide(
-                color: (textColor ?? AppColors.COLOR_BLUE_500)
-                    .withOpacity(!disable! ? 1.0 : 0.2),
-                width: 1.0,
-                style: BorderStyle.solid),
-          ),
+          side: noBorder
+              ? null
+              : MaterialStateProperty.all(
+                  BorderSide(
+                      color: (textColor ?? AppColors.COLOR_RED_500)
+                          .withOpacity(!disable! ? 1.0 : 0.2),
+                      width: 1.0,
+                      style: BorderStyle.solid),
+                ),
         ),
         child: Text(
           btnTitle,
@@ -62,7 +64,7 @@ class ButtonCore extends StatelessWidget {
               : buttonStyle ??
                   Style_OpenSans.styleButton(
                     fontSize: fontSize,
-                    color: textColor ?? AppColors.COLOR_BLUE_500,
+                    color: textColor ?? AppColors.COLOR_RED_500,
                   ),
         ),
       );

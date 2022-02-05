@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 class CustomInput extends StatelessWidget {
   final bool isReadOnly;
@@ -137,7 +137,7 @@ class CustomInput extends StatelessWidget {
           borderSide: BorderSide(
               color: !showBorderColor!
                   ? Colors.transparent
-                  : AppColors.COLOR_BLUE_500,
+                  : AppColors.COLOR_RED_500,
               width: 1.5,
               style: BorderStyle.solid),
         ),

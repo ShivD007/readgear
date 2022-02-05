@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/atoms/buttons/primary_button.dart';
-import 'package:nirog_street/app/atoms/buttons/secondary_button.dart';
-import 'package:nirog_street/app/atoms/custom_dropdown.dart';
-import 'package:nirog_street/app/atoms/custom_input.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
-import 'package:nirog_street/app/core/validation_functions.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/atoms/buttons/primary_button.dart';
+import 'package:readgear/app/atoms/buttons/secondary_button.dart';
+import 'package:readgear/app/atoms/custom_dropdown.dart';
+import 'package:readgear/app/atoms/custom_input.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/validation_functions.dart';
+import 'package:readgear/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 import '../controllers/create_account_controller.dart';
 
 class CreateAccountView extends GetView<CreateAccountController> {
@@ -23,7 +23,7 @@ class CreateAccountView extends GetView<CreateAccountController> {
   Widget build(BuildContext context) => GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: Scaffold(
-          backgroundColor: AppColors.COLOR_BLUE_50,
+          backgroundColor: AppColors.COLOR_RED_50,
           body: SafeArea(
             child: SingleChildScrollView(
               child: Form(

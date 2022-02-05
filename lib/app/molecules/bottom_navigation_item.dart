@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/Images/custom_asset_image.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/atoms/Images/custom_asset_image.dart';
+import 'package:readgear/app/core/app_colors.dart';
 
 import '/app/core/constants/style_constants.dart';
 

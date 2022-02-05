@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 import 'text_extension.dart';
 
 class CustomCheckBox extends StatelessWidget {
@@ -48,7 +48,7 @@ class CustomCheckBox extends StatelessWidget {
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(SMALL_BORDER_RADIUS)),
           value: checkedValue,
-          activeColor: AppColors.COLOR_BLUE_500,
+          activeColor: AppColors.COLOR_RED_500,
           onChanged: disable!
               ? (newValue) {}
               : (newValue) {

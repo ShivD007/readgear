@@ -1,14 +1,11 @@
 import 'dart:async';
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/core/app_colors.dart';
 
 class CustomCarousel extends StatefulWidget {
   final List<Widget> widgetList; //only this field is mandatory
-
   final Duration? duration;
   final Curve? curve;
   final Axis? scrollDirection;
@@ -37,7 +34,7 @@ class CustomCarousel extends StatefulWidget {
       this.scrollDirection = Axis.horizontal,
       this.disabledIndicatorRadius,
       this.enabledIndicatorRadius,
-      this.indicatorColor = AppColors.COLOR_BLUE_500,
+      this.indicatorColor = AppColors.COLOR_RED_500,
       this.disabledIndicatorColor = AppColors.COLOR_GREY_400,
       this.maxIndicator = 7,
       this.spacebetweenIndicators,
@@ -116,14 +113,15 @@ class _CarouselState extends State<CustomCarousel> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        SizedBox(
-          height: widget.height,
-          child: NotificationListener<OverscrollIndicatorNotification>(
-            onNotification: (overscroll) {
-              overscroll.disallowGlow();
-              return false;
-            },
+        NotificationListener<OverscrollIndicatorNotification>(
+          onNotification: (overscroll) {
+            overscroll.disallowGlow();
+            return false;
+          },
+          child: SizedBox(
+            height: widget.height,
             child: PageView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: widget.widgetList.length,
@@ -140,48 +138,50 @@ class _CarouselState extends State<CustomCarousel> {
             ),
           ),
         ),
-        SizedBox(
-          height: widget.spaceBeforeIndicator ?? 14.0,
-        ),
-        SizedBox(
-          height: widget.enabledIndicatorRadius != null &&
-                  widget.disabledIndicatorRadius != null
-              ? max(widget.enabledIndicatorRadius!,
-                  widget.disabledIndicatorRadius!)
-              : 11,
-          child: ListView.separated(
-            shrinkWrap: true,
-            itemCount: min(widget.maxIndicator!, widget.widgetList.length),
-            scrollDirection: Axis.horizontal,
-            physics: const NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              return ValueListenableBuilder(
-                  valueListenable: currentIndex,
-                  builder: (BuildContext context, int currentIndex, _) {
-                    bool _isSelected = index == currentIndex ||
-                        widget.widgetList.length > widget.maxIndicator! &&
-                            currentIndex >= widget.maxIndicator! - 1 &&
-                            index >= widget.maxIndicator! - 1;
-                    return Container(
-                      height: _isSelected
-                          ? widget.enabledIndicatorRadius ?? 11
-                          : widget.disabledIndicatorRadius ?? 10,
-                      width: _isSelected
-                          ? widget.enabledIndicatorRadius ?? 11
-                          : widget.disabledIndicatorRadius ?? 10,
-                      decoration: BoxDecoration(
-                          color: _isSelected
-                              ? widget.indicatorColor
-                              : widget.disabledIndicatorColor,
-                          shape: BoxShape.circle),
-                    );
-                  });
-            },
-            separatorBuilder: (BuildContext context, int index) => SizedBox(
-              width: widget.spacebetweenIndicators ?? 4,
-            ),
+        if (widget.showBottomIndicator!) ...[
+          SizedBox(
+            height: widget.spaceBeforeIndicator ?? 10.0,
           ),
-        )
+          SizedBox(
+            height: widget.enabledIndicatorRadius != null &&
+                    widget.disabledIndicatorRadius != null
+                ? max(widget.enabledIndicatorRadius!,
+                    widget.disabledIndicatorRadius!)
+                : 11,
+            child: ListView.separated(
+              shrinkWrap: true,
+              itemCount: min(widget.maxIndicator!, widget.widgetList.length),
+              scrollDirection: Axis.horizontal,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {
+                return ValueListenableBuilder(
+                    valueListenable: currentIndex,
+                    builder: (BuildContext context, int currentIndex, _) {
+                      bool _isSelected = index == currentIndex ||
+                          widget.widgetList.length > widget.maxIndicator! &&
+                              currentIndex >= widget.maxIndicator! - 1 &&
+                              index >= widget.maxIndicator! - 1;
+                      return Container(
+                        height: _isSelected
+                            ? widget.enabledIndicatorRadius ?? 11
+                            : widget.disabledIndicatorRadius ?? 10,
+                        width: _isSelected
+                            ? widget.enabledIndicatorRadius ?? 11
+                            : widget.disabledIndicatorRadius ?? 10,
+                        decoration: BoxDecoration(
+                            color: _isSelected
+                                ? widget.indicatorColor
+                                : widget.disabledIndicatorColor,
+                            shape: BoxShape.circle),
+                      );
+                    });
+              },
+              separatorBuilder: (BuildContext context, int index) => SizedBox(
+                width: widget.spacebetweenIndicators ?? 4,
+              ),
+            ),
+          )
+        ]
       ],
     );
   }

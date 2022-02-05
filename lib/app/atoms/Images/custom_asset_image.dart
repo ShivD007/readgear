@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 class CustomAssetImageView extends StatelessWidget {
   final String imagePath;
@@ -44,9 +44,10 @@ class CustomAssetImageView extends StatelessWidget {
         imagePath,
         height: height,
         width: width,
-        fit: fit,
+        fit: fit ?? BoxFit.cover,
         errorBuilder:
             (BuildContext context, Object exception, StackTrace? stackTrace) {
+          print(stackTrace);
           return const Icon(Icons.error);
         },
       ),

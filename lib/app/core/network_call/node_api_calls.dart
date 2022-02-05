@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/models/failure_model.dart';
-import 'package:nirog_street/flavors.dart';
+import 'package:readgear/app/core/models/failure_model.dart';
+import 'package:readgear/flavors.dart';
 import '../models/api_response_model.dart';
 
 abstract class NodeApiCalls {

@@ -2,14 +2,14 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/constants/api_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
-import 'package:nirog_street/app/core/models/api_response_model.dart';
-import 'package:nirog_street/app/core/models/failure_model.dart';
-import 'package:nirog_street/app/core/network_call/node_api_calls.dart';
-import 'package:nirog_street/app/core/validation_functions.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
-import 'package:nirog_street/app/routes/custom_navigator.dart';
+import 'package:readgear/app/core/constants/api_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/models/api_response_model.dart';
+import 'package:readgear/app/core/models/failure_model.dart';
+import 'package:readgear/app/core/network_call/node_api_calls.dart';
+import 'package:readgear/app/core/validation_functions.dart';
+import 'package:readgear/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/custom_navigator.dart';
 
 class LoginWithOTPController extends GetxController {
   final NodeApiCalls nodeApiCalls;

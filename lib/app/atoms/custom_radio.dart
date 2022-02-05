@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/core/app_colors.dart';
 import 'text_extension.dart';
 
 class CustomRadio<T> extends StatelessWidget {
@@ -34,7 +34,7 @@ class CustomRadio<T> extends StatelessWidget {
                 child: Radio<T?>(
                   groupValue: groupValue,
                   value: checkedValue,
-                  activeColor: AppColors.COLOR_BLUE_500,
+                  activeColor: AppColors.COLOR_RED_500,
                   onChanged: (T? value) {
                     _isChecked.value = value;
                     onChangeCallback(value);

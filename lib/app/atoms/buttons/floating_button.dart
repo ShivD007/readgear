@@ -22,7 +22,7 @@ class CustomFloatingActionButton extends StatelessWidget {
             icon,
             color: AppColors.COLOR_WHITE,
           ),
-          backgroundColor: AppColors.COLOR_BLUE_500,
+          backgroundColor: AppColors.COLOR_RED_500,
           elevation: elevation,
         ),
       ),

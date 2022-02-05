@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/atoms/buttons/button_core.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
+import 'package:readgear/app/atoms/buttons/button_core.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
 
 class PrimarySmallButton extends ButtonCore {
   PrimarySmallButton(
@@ -36,7 +36,7 @@ class SecondarySmallButton extends ButtonCore {
       required String btnTitle,
       required VoidCallback onClick,
       Color? buttonColor,
-      Color? textColor = AppColors.COLOR_BLUE_500,
+      Color? textColor = AppColors.COLOR_RED_500,
       double? padding = 10})
       : super(
             key: key,

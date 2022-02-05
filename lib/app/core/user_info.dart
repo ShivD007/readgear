@@ -1,4 +1,4 @@
-// import 'package:nirog_street/app/core/models/user.dart';
+// import 'package:readgear/app/core/models/user.dart';
 
 // User userInfo = User.fromJson({
 //   "id": 103568,

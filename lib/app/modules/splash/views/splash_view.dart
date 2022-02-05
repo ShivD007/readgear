@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/atoms/Images/custom_asset_image.dart';
-import 'package:nirog_street/app/core/constants/image_constants.dart';
+import 'package:readgear/app/atoms/Images/custom_asset_image.dart';
+import 'package:readgear/app/core/constants/image_constants.dart';
 import '../controllers/splash_controller.dart';
 
 class SplashView extends StatefulWidget {
@@ -33,8 +33,8 @@ class _SplashViewState extends State<SplashView> {
           children: <Widget>[
             CustomAssetImageView(
               fit: BoxFit.fill,
-              imagePath: NIROG_STREET_LOGO,
-              height: 91.h,
+              imagePath: APP_ICON,
+              height: 180.h,
               width: 224.w,
             ),
           ],

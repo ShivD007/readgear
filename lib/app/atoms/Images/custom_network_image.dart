@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:nirog_street/app/core/constants/image_constants.dart';
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/constants/image_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 class CustomNetworkImageView extends StatelessWidget {
   final String imagePath;
@@ -68,8 +68,7 @@ class CustomNetworkImageView extends StatelessWidget {
         fit: fit,
         placeholder: (context, url) =>
             Container(child: const CircularProgressIndicator()),
-        errorWidget: (context, _, s) =>
-            errorWidget ?? Image.asset(NIROG_STREET_LOGO),
+        errorWidget: (context, _, s) => errorWidget ?? Image.asset(APP_ICON),
       ),
     );
   }

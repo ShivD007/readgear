@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
+import 'package:readgear/app/core/app_colors.dart';
 import 'text_extension.dart';
 
 class ClickableText extends StatelessWidget {
@@ -25,9 +25,9 @@ class ClickableText extends StatelessWidget {
         child: !isLabelStyle!
             ? strButtonText.overline16(
                 textAlign: textAlignment ?? TextAlign.center,
-                textColor: textColor ?? AppColors.COLOR_BLUE_500)
+                textColor: textColor ?? AppColors.COLOR_RED_500)
             : strButtonText.label10(
                 textAlign: textAlignment ?? TextAlign.center,
-                textColor: textColor ?? AppColors.COLOR_BLUE_500));
+                textColor: textColor ?? AppColors.COLOR_RED_500));
   }
 }

@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
+
 import 'app/core/app_themes.dart';
 import 'flavors.dart';
 import 'package:get/get.dart';
@@ -29,7 +29,12 @@ class AppLaunch extends StatelessWidget {
             theme: AppThemes.ligtTheme,
             initialRoute: AppPages.INITIAL,
             getPages: AppPages.routes,
-            builder: EasyLoading.init(),
+            builder: (context, child) {
+              return GestureDetector(
+                onTap: () => FocusScope.of(context).unfocus(),
+                child: child,
+              );
+            },
           ),
         );
       },

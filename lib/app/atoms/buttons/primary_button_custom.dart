@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
 
 import '/app/core/app_colors.dart';
 import '/app/core/app_themes.dart';
@@ -27,7 +27,7 @@ class PrimaryButtonCustom extends StatelessWidget {
     required this.buttonAction,
     this.dCornerRadius,
     this.borderColor = Colors.transparent,
-    this.bgColor = AppColors.COLOR_BLUE_500,
+    this.bgColor = AppColors.COLOR_RED_500,
     this.textColor = AppColors.COLOR_GREY_900,
     this.buttonTextAlignment = TextAlign.center,
     this.bIconLeft = true,

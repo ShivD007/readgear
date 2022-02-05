@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/local_shared_data.dart';
-import 'package:nirog_street/app/core/models/user.dart';
+import 'package:readgear/app/core/local_shared_data.dart';
+import 'package:readgear/app/core/models/user.dart';
 import '../../../core/user_info.dart';
 import '/app/routes/app_pages.dart';
 import '/app/routes/custom_navigator.dart';

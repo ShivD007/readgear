@@ -9,7 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
-import 'package:nirog_street/app/core/crash_analytics.dart';
+import 'package:readgear/app/core/crash_analytics.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -56,9 +56,7 @@ onSaveImageFromUrl(String filename, String imageUrl) async {
       name: filename,
     );
     EasyLoading.showSuccess("Image Downloaded");
-  } catch (exception, stackTrace) {
-    FirebaseCrashAnalyticsMethods.reportError(exception, stackTrace);
-  }
+  } catch (exception, stackTrace) {}
 }
 
 Future<void> openPhone(

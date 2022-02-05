@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nirog_street/app/atoms/custom_spacers.dart';
-import 'package:nirog_street/app/atoms/text_extension.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
-import 'package:nirog_street/app/core/models/list_item_model.dart';
+
+import 'package:readgear/app/atoms/custom_spacers.dart';
+import 'package:readgear/app/atoms/text_extension.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/models/list_item_model.dart';
 import '../core/constants/value_constants.dart';
 import 'dart:ui' as ui;
 
@@ -170,7 +170,7 @@ class _CustomDropdownState<T> extends State<CustomDropdownWithoutValidation<T>>
                       ? RotationTransition(
                           turns: _rotateAnimation,
                           child: const Icon(
-                            FontAwesomeIcons.chevronDown,
+                            Icons.keyboard_arrow_down,
                             size: 15,
                             color: AppColors.COLOR_GREY_400,
                           ),

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   //All colors for nirogstreet
-  static const Color COLOR_BLUE_50 = const Color(0xFFE9F6FB);
-  static const Color COLOR_BLUE_500 = const Color(0xFF24ACDA);
+  static const Color COLOR_RED_50 = const Color(0xFFffb3b3);
+  static const Color COLOR_RED_500 = const Color(0xFFff0000);
 
-  static const Color COLOR_BLUE_300 = const Color(0xFF67C4E5);
-  static const Color COLOR_BLUE_900 = const Color(0xFF00406E);
+  // static const Color COLOR_BLUE_300 = const Color(0xFF67C4E5);
+  static const Color COLOR_RED_900 = const Color(0xFFb30000);
 
   static const Color COLOR_WHITE = const Color(0xFFFFFFFF);
 
@@ -32,5 +32,4 @@ class AppColors {
 
   static const Color COLOR_YELLOW = const Color(0xFFFFCC05);
   static const Color COLOR_RED = const Color(0xFFDC2020);
-
 }

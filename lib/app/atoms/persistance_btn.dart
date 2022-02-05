@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nirog_street/app/atoms/buttons/primary_button.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
+import 'package:readgear/app/atoms/buttons/primary_button.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
 
 class PersistanceButton extends StatelessWidget {
   final Widget widgetlist;

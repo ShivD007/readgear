@@ -1,6 +1,6 @@
 // All strings used local to the app, not what is seen on the uI
 //==========================================================
-import 'package:nirog_street/app/core/constants/value_constants.dart';
+import 'package:readgear/app/core/constants/value_constants.dart';
 
 const OK = "Ok";
 const CANCEL = "Cancel";
@@ -54,10 +54,10 @@ const SAVE = "Save";
 const HINT_CON_PWD2 = "Confirm Password";
 const SAVE_IMAGE = "Save image";
 // walkThrough page
-const WALKTROUGH_WELCOME = "Welcome to Nirog Street";
-const BUY_MEDICINE = "Buy Medicines";
-const CONNECT_DOCTOR = "Connect with Great Doctors";
-const LEARN_AYURVEDA = "Learn About Ayurveda";
+const WALKTROUGH_WELCOME = "Welcome to ReadGear";
+const SAFE_RIDE = "Move with safety";
+const CONNECT_DOCTOR = "Outsation Tour";
+const SAVING_EFFECTIVE = "Pocket friendly rides";
 
 // validation String
 const ENTER_PASSWORD = 'Enter password';

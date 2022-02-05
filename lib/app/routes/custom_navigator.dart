@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/routes/app_pages.dart';
+import 'package:readgear/app/routes/app_pages.dart';
 
 class CustomNavigator {
   CustomNavigator._();

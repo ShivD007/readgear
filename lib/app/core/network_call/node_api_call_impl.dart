@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
-import 'package:nirog_street/app/core/constants/string_constants.dart';
-import 'package:nirog_street/app/core/crash_analytics.dart';
-import 'package:nirog_street/app/core/models/api_response_model.dart';
-import 'package:nirog_street/app/core/models/failure_model.dart';
-import 'package:nirog_street/app/core/network_call/node_api_calls.dart';
-import 'package:nirog_street/flavors.dart';
+import 'package:readgear/app/core/constants/string_constants.dart';
+import 'package:readgear/app/core/crash_analytics.dart';
+import 'package:readgear/app/core/models/api_response_model.dart';
+import 'package:readgear/app/core/models/failure_model.dart';
+import 'package:readgear/app/core/network_call/node_api_calls.dart';
+import 'package:readgear/flavors.dart';
 
 class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
   String nodeBaseUrl = FlavorTypes.appBaseURL;
@@ -21,7 +21,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       });
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return _response(response);
     }
   }
@@ -33,7 +32,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       response = await get(nodeBaseUrl + endpoint);
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return Left(_response(response));
     }
   }
@@ -48,7 +46,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       });
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return Left(_response(response));
     }
   }
@@ -60,7 +57,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       response = await post(nodeBaseUrl + endpoint, body);
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return Left(_response(response));
     }
   }
@@ -75,7 +71,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       });
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return Left(_response(response));
     }
   }
@@ -87,7 +82,6 @@ class NodeApiCallsImpl extends GetConnect implements NodeApiCalls {
       response = await put(nodeBaseUrl + endpoint, body);
       return Right(ApiResponseModel.fromJson(response.body));
     } catch (error, stackTrace) {
-      await FirebaseCrashAnalyticsMethods.reportError(error, stackTrace);
       return Left(_response(response));
     }
   }

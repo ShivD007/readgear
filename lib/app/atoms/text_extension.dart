@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nirog_street/app/core/app_colors.dart';
-import 'package:nirog_street/app/core/constants/style_constants.dart';
+import 'package:readgear/app/core/app_colors.dart';
+import 'package:readgear/app/core/constants/style_constants.dart';
 
 extension ExtendedString on String {
   Text h25(
